@@ -5,11 +5,11 @@ resources:
 - deployment.yaml
 - service.yaml
 
-configMapGenerator:
-  - name: app-version-cm
-    literals:
-      - IMAGE_TAG=cb7c3ff
 images:
 - name: heartbeat-api
   newName: fernanduandrade/heartbeat-api
-  newTag: cb7c3ff
+  newTag: 57bc935
+configMapGenerator:
+- literals:
+  - IMAGE_TAG=57bc935
+  name: app-version-cm
