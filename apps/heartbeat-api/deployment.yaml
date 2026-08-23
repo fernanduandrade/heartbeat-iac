@@ -12,12 +12,10 @@ spec:
     metadata:
       labels:
         app: heartbeat-api
-      annotations:
-        heartbeat-api/image-tag: "edbd98b"
     spec:
       containers:
         - name: heartbeat-api
-          image: fernanduandrade/heartbeat-api:edbd98b
+          image: heartbeat-api
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
