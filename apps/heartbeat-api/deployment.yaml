@@ -39,8 +39,9 @@ spec:
                   fieldPath: spec.nodeName
             - name: IMAGE_TAG
               valueFrom:
-                fieldRef:
-                  fieldPath: spec.containers[0].image
+                configMapKeyRef:
+                  name: app-version-cm
+                  key: IMAGE_TAG
           readinessProbe:
             httpGet:
               path: /health/

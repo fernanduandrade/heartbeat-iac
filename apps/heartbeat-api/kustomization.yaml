@@ -4,6 +4,11 @@ resources:
 - namespace.yaml
 - deployment.yaml
 - service.yaml
+
+configMapGenerator:
+  - name: app-version-cm
+    literals:
+      - IMAGE_TAG=cb7c3ff
 images:
 - name: heartbeat-api
   newName: fernanduandrade/heartbeat-api
